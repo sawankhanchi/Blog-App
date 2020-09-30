@@ -3,7 +3,7 @@
 ====================== */
 
 /* Main Footer */
-footer .main-footer{position: absolute;bottom: 0;width: 100%;	padding: 10px 0;	background: #252525;}
+footer .main-footer{position: sticky;bottom: 0;width: 100%;	padding: 10px 0;	background: #252525;}
 footer ul{	padding-left: 0;	list-style: none;}
 
 /* Copy Right Footer */
