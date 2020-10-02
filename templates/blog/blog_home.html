@@ -1,9 +1,32 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block custom_css %}
-
+<link rel='stylesheet' href="{% static 'Custom_CSS/blog_home.css'%}">
+<!--  Typed.Js Do Not Touch It.  -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typed.js"></script>
 {% endblock custom_css %}
 {% block blog_home_block %}
+
+<section class="jumbotron sec my-2 mt-2 mx-2 mx-xs-2 mx-sm-2 text-center" >
+  <div class="container mainbox w3-theme-l4" >
+    <div class='view mt-2'>
+      <a href="/about"><img src="{% static 'common/logo2.png'%}" class="bd-placeholder-img img-fluid my-4 rounded-circle" width="140" height="140"></a>
+    </div>
+    <div>
+      <h4 class="display-4 typingJS"><b><span id="typed"></b></span></h4>
+    </div>
+    <p class="lead">WeDevelopers is a blogging Website Tech Blogs, Coding Blogs, Web Development, Python, Django, Flask,
+      JavaScript and Much More</p>
+    <p>
+      <a href="/blog" class="btn btn-warning custom mx-2 my-4"> <span> Blog </span></a>
+
+      <a href="/contact" class="btn btn-dark custom  my-4"> <span> Contact</span></a>
+    </p>
+   
+  </div>
+
+</section>
+
 <div class="jumbotron container mt-1 bg-info ">
     <div class="col-md-6 px-0">
       <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
@@ -11,8 +34,23 @@
       <p class="lead mb-0"><a href="#" class="text-white ">Continue reading...</a></p>
     </div>
   </div>
+
+ <!-- Do Not Touch Typed.Js -->
+  <div class="typed-strings"></div>
 {% endblock blog_home_block %}
   {% block js %}
+<script>
+  var typed = new Typed('#typed',{
+  strings:["Welcome To WeDevelopers","Web-Development","Coding Blogs","Tech Blogs"],
+  backSpeed: 15,
+  smartBackspace: true,
+  backDelay: 1200,
+  startDelay: 1000,
+  typeSpeed: 25,
+  loop: true,
+
+  });
+  </script>
   {% endblock js %}
 
 
