@@ -11,7 +11,7 @@
 
   <a class="navbar-brand" href="{{home_url}}">
     <img class='rounded-circle' src="{%static 'common/logo2.png'%}" width="50" height="50" alt="LOGO">
-    {% if brand_name %}{{brand_name}} {% else %} wedevelopers {% endif %}</a>
+    {% if brand_name %}{{brand_name}} {% else %} WeDevelopers {% endif %}</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -22,11 +22,11 @@
         <a class="nav-link" href="{{home_url}}">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item  {% if request.path == contact_url %} active{% endif %}">
-        <a class="nav-link" href="{{contact_url}}">Contact</a>
+        <a class="nav-link" href="{{contact_url}}">Contacts</a>
       </li>
       
       <li class="nav-item  {% if request.path == about_url %} active{% endif %}">
-        <a class="nav-link" href="{{about_url}}">About Us</a>
+        <a class="nav-link" href="{{about_url}}">About us</a>
       </li>
       
       <li class="nav-item {% if request.path == blog_url %} active -*{% endif %}">
@@ -81,7 +81,7 @@
         <form action="/login" method="post">{% csrf_token %}
           <div class="form-group">
             <label for="username">Enter Your Username or Email Id</label>
-            <input type="text" required class="form-control" id="usernamelogin" name="usernamelogin" placeholder="someone">
+            <input type="text" required class="form-control" id="usernamelogin" name="usernamelogin" placeholder="Your name or email">
           </div>
           
           <div class="form-group">
