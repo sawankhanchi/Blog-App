@@ -1,5 +1,6 @@
 a.navbar-brand {
     display: inline-block;
+    margin-top: 2px;
     padding-top: .3125rem;
     padding-bottom: .3125rem;
     margin-right: 1rem;
@@ -10,16 +11,15 @@ a.navbar-brand {
 
 .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
     color: #fff;
+    margin-bottom: 4px;
 }
 
 .navbar-dark .navbar-nav .nav-link {
     color: #f8f9fa;
-    margin-top: 2px;
+    margin-top: 1px;
 }
 
-/* .bg-dark {
-    background-color: #053769!important;
-} */
+
 .bg-primary {
-    background-color: #0e3b80!important;
+    background-color: #27292b!important;
 }

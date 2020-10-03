@@ -66,36 +66,4 @@
       </div>
       </nav>
 
-       <!--Login Modal -->
-<div class=" modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title" id="loginModalTitle">Login to WeDevelopers</h1>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        
-        <form action="/login" method="post">{% csrf_token %}
-          <div class="form-group">
-            <label for="username">Enter Your Username or Email Id</label>
-            <input type="text" required class="form-control" id="usernamelogin" name="usernamelogin" placeholder="Your name or email">
-          </div>
-          
-          <div class="form-group">
-            <label for="pass">Enter Your Password</label>
-            <input type="password" required class="form-control" id="passlogin" name="passlogin" placeholder="Enter Your Password">
-          </div>
-          <button type="submit" class="btn btn-primary">Log In</button>
-        </form>
 
-      </div>
-      <div class="modal-footer">
-        
-      </div>
-    </div>
-  </div>
-</div>
-{% include 'base/registration_form.html' %}
