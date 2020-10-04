@@ -1,6 +1,37 @@
 {% extends 'base.html' %}
 {% block blog_home_block %}
-  <div class="container">
-    <h1>Our Contacts</h1>
+<hr class="featurette-divider">
+<div class="container">
+<form>
+  <div class="row">
+    <div class="col">
+  <div class="form-group">
+    <label for="exampleFormControlInput1">First Name </label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Moha">
+  </div>
 </div>
+</div>
+
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Last Name</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Kumar">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+  
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Phone</label>
+    <input type="tel" class="form-control" id="exampleFormControlInput1" placeholder="+91123456789">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">How can I help You ??</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <button class="btn  btn-primary " type="submit">Submit</button>
+</form>
+</div>
+<hr class="featurette-divider">
 {% endblock blog_home_block %}
