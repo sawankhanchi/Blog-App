@@ -5,30 +5,44 @@
 <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/product/">
 <!--  Typed.Js  -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typed.js"></script>
+<link rel='stylesheet' href="{% static 'Custom_CSS/blog_home.css'%}">
 <style>
 .typingJS{font-size: 3rem;color: #fff;}
 .font-color-change{color: black;}
+.forright{
+  justify-content: center;
+  display: grid;
+}
+.forleft{
+  justify-content:center;
+  display: grid;
+}
+.card{
+  border-radius: 25px;
+}
 </style>
 
 {% endblock custom_css %}
 {% block blog_home_block %}
 
+{% url 'Blog' as Blog_url %}
+{% url 'Contact' as contact_url %}
 <section class="size text-center mt-1" >
   <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-info">
     <div class="col-md-5 p-lg-5 mx-auto my-5">
       <h1 class="display-4  font-weight-normal typingJS"><span id="typed"></span></h1>
       <p class="lead font-color-change font-weight-normal mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptates accusamus neque deleniti quidem impedit similique suscipit assumenda qui quod illum, ex quia ea rem. Iusto reiciendis veniam quasi eligendi nisi quis neque eveniet dolore. Tempora aut cupiditate similique esse explicabo, deserunt quo, perferendis maiores dolore, iusto animi iure tempore! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, blanditiis.</p>
       <p>
-      <a class="btn btn-primary custom" href="#"><span>Blogs</span></a>
-      <a class="btn btn-primary custom" href="#"><span>Contact</span></a>
+      <a role='button' class="btn btn-primary custom" href="{{Blog_url}}"><span>Blogs</span></a>
+      <a role='button' class="btn btn-primary mt-2 mx-2 custom" href="{{contact_url}}"><span>Contact</span></a>
     </p>
     </div>
     <div class="product-device shadow-sm d-none d-md-block"></div>
     <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
   </div>
   <div class="container">
-    <div class="jumbotron p-3 p-md-5 text-white rounded bg-primary">
-      <div class="col-md-10 px-0">
+    <div class="jumbotron p-3 p-md-5 mt-2 text-white rounded bg-primary">
+      <div class="col-md-12 px-0">
         <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
         <p class="lead my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, modi aliquam. Cumque enim delectus soluta iste libero quas aperiam culpa voluptate, ratione vero voluptates quasi, eligendi a, hic odio quam placeat nobis reiciendis doloribus modi quia quaerat eaque quae similique! Quibusdam quasi rem non totam deserunt esse ea. Beatae, vel!.</p>
         <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
@@ -38,17 +52,18 @@
 
   <hr class="featurette-divider">
 
-  <div class="row container featurette">
-    <div class="col-md-7">
+  <div class="row container for featurette">
+    <div class="col-md-8">
       <h1 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h1>
-      <p class="lead" style="text-align:left ;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore iste recusandae in rem id praesentium iure facere quasi optio voluptatem voluptate rerum, provident quas vero sit quae! Consequatur dicta odio nam quis eaque fugiat nobis amet tempora perspiciatis nostrum possimus iure neque, dolorem eum quasi dolore molestias id debitis aperiam.</p>
+      <p class="lead" style="text-align:center ;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore iste recusandae in rem id praesentium iure facere quasi optio voluptatem voluptate rerum, provident quas vero sit quae! Consequatur dicta odio nam quis eaque fugiat nobis amet tempora perspiciatis nostrum possimus iure neque, dolorem eum quasi dolore molestias id debitis aperiam.</p>
+      <p style="justify-content: center;display:grid;"><a href="#" class="btn btn-success my-2">Continue Reading</a></p>
     </div>
-    <div class="col-md-5">
-      <img class="featurette-image  img-fluid mr-0" data-src="holder.js/500x500/auto" alt="500x500" style="width:300px; height: 300px;" src="{% static 'common/ctwo.jpg' %}" data-holder-rendered="true">
+    <div class="col-md-4 mt-2 forright">
+      <img class="featurette-image rounded-circle  img-fluid mr-0" data-src="holder.js/500x500/auto" alt="500x500" style="width:200px; height: 200px;" src="{% static 'common/ctwo.jpg' %}" data-holder-rendered="true">
     </div>
   </div>
-
-  <div class="container">
+<hr class="featurette-divider">
+  <div class="container my-4">
     <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-primary rounded shadow-sm">
       <img class="mr-3 rounded-circle" src='{% static 'common/logo2.png' %}' alt="" width="48" height="48">
       <div class="lh-100">
@@ -61,20 +76,21 @@
   <hr class="featurette-divider">
 
   <div class="row container featurette">
-    <div class="col-md-7 order-md-2">
+    <div class="col-md-8 order-md-2">
       <h1 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h1>
-      <p class="lead"style="text-align:right ;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt omnis reprehenderit corrupti dolore rem temporibus itaque odit in? Neque velit unde asperiores non exercitationem fugit dicta laboriosam! Aliquid at, enim eum sapiente voluptatibus magni corrupti, veniam eius amet est suscipit doloremque doloribus facere debitis ab accusantium eos, porro quos facilis.</p>
+      <p class="lead"style="text-align:center ;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt omnis reprehenderit corrupti dolore rem temporibus itaque odit in? Neque velit unde asperiores non exercitationem fugit dicta laboriosam! Aliquid at, enim eum sapiente voluptatibus magni corrupti, veniam eius amet est suscipit doloremque doloribus facere debitis ab accusantium eos, porro quos facilis.</p>
+      <p style="justify-content: center;display:grid;"><a href="#" class="btn btn-success my-2">Continue Reading</a></p>
     </div>
-    <div class="col-md-5 order-md-1">
-      <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="{% static 'common/cfour.jpg' %}" data-holder-rendered="true" style="width: 300px; height: 300px;">
+    <div class="col-md-4 mt-2 forleft order-md-1">
+      <img class="featurette-image rounded-circle img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="{% static 'common/cfour.jpg' %}" data-holder-rendered="true" style="width: 200px; height: 200px;">
     </div>
   </div>
+  <hr class="featurette-divider">
 
-
-  <div class="bg-dark jumbotext my-4 jumbotron-fluid">
+  <div class="bg-info jumbotext my-4 jumbotron-fluid">
       <p class="display-4">Our Recent Blogs</p>
   </div>
-
+  <hr class="featurette-divider">
   <div class="tabs mt-4 lead is-boxed is-centered">
     <ul>
       <li class="is-active">
@@ -231,12 +247,13 @@
 <hr class="title-border">
 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 ">
 <i class="fa fa-thumbs-o-up fa-5x"></i>
-<h4 style="color: rgba(168,168,168);">LIKE US! SPREAD THE WORD!</h4>
+<h4 style="color: rgba(168,168,168);">LIKE US! SPREAD THE WORD! WE ARE DEVELOPERS</h4>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eum inventore et earum doloremque obcaecati at beatae nihil. Recusandae voluptatem incidunt velit soluta consequuntur voluptates, possimus repellendus quo porro reprehenderit modi eum saepe ducimus nobis et est praesentium veritatis quod.<br>beatae .</p>
 </div>
 </div>
 </div>
-</div></section>
+</div>
+</section>
 
 
 <section id="followus">

@@ -46,6 +46,6 @@ body p{font-family:sans-serif}
 .flex-equal > * {-ms-flex: 1;flex: 1;}
 @media (min-width: 768px) {.flex-md-equal > * {-ms-flex: 1;flex: 1;}}
   .overflow-hidden { overflow: hidden; }
-.jumbotext{color: aliceblue;background-color: #27292b!important;}
+.jumbotext{color: aliceblue;background-color: #27292b!important;font-size: small; font-weight: bolder;}
 .display-4{font-size: 2em;}
 .featurette-heading{font-size: 35px;margin-bottom: 40px;}

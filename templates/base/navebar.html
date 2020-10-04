@@ -1,13 +1,11 @@
 {% url 'BlogHome' as home_url %}
-{% url 'BlogContact' as contact_url %}
+{% url 'Contact' as contact_url %}
 {% url 'login' as login_url %}
 {% url 'register' as register_url %}
 {% url 'about' as about_url %}
 {% url 'Blog' as blog_url %}
-
-
 {% load static %}
-<div class="navbar mb-1 navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar mb-1 navbar-expand-lg navbar-dark bg-primary">
 
   <a class="navbar-brand" href="{{home_url}}">
     <img class='rounded-circle' src="{%static 'common/logo2.png'%}" width="30" height="30" alt="LOGO">
@@ -15,25 +13,24 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item  {% if request.path == home_url %} active{% endif %}">
-        <a class="nav-link" href="{{home_url}}">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{{home_url}}">Home<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item  {% if request.path == contact_url %} active{% endif %}">
-        <a class="nav-link" href="{{contact_url}}">Contacts</a>
+        <a class="nav-link" href="{{contact_url}}">Contact</a>
       </li>
       
       <li class="nav-item  {% if request.path == about_url %} active{% endif %}">
-        <a class="nav-link" href="{{about_url}}">About us</a>
+        <a class="nav-link" href="{{about_url}}">About</a>
       </li>
       
       <li class="nav-item {% if request.path == blog_url %} active -*{% endif %}">
         <a class="nav-link" href="{{blog_url}}">Blogs</a>
       </li>
-      
-      <!-- <li class="nav-item  {% if request.path == register_url %} active{% endif %}">
+<!--       
+      <li class="nav-item  {% if request.path == register_url %} active{% endif %}">
         <a  class="nav-link" href="{{register_url}}">Register</a>
       </li> -->
 
@@ -43,6 +40,7 @@
       <button class="btn btn-warning my-2 my-sm-0 " type="submit" style="border-radius:30%">Search</button>
     </form>
   
+
   <div class="form-inline">
     {% if user.is_authenticated %}
           <ul class="navbar-nav mr-2 ">
@@ -57,13 +55,14 @@
           </li>
           </ul>
           {% else %}
-          <button type="button" class="btn btn-danger mx-2 my-2 mx-xs-2 mx-sm-2 my-sm-1 my-xs-3 " data-toggle="modal" data-target="#loginModal" style="border-radius:30%">Login</button>
+          <a role="button" class="btn btn-info mx-2" href="{{login_url}}"  style="border-radius:30%">Log In</a>
           <!-- Button trigger to SignUp modal -->
-          <button type="button" class="btn btn-danger mx-2  mx-xs-2 mx-sm-2 my-2 my-sm-1 my-xs-3" data-toggle="modal" data-target="#signupModal" style="border-radius:30%">Join Us</button>
+          <a role="button" class="btn btn-danger mx-2" href='{{register_url}}' style="border-radius:30%">Register</a>
           {% endif %}
         </div>
         </div>
       </div>
       </nav>
+     
 
 

@@ -1,9 +1,55 @@
-  
 {% extends 'base.html' %}
+  {% load static %}
+  {% block custom_css %}
+  {% comment %} <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/"> {% endcomment %}
+  <link rel='stylesheet' href="{% static 'Custom_CSS/signin.css'%}">
+<style>
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+.bd-placeholder-img-lg {
+  font-size: 3.5rem;
+    }
+  }
+.sign{
+  justify-content: center;
+  display: grid;
+}
+.display-4{font-size: 30px;font-weight: bolder;color:white;}
+.lead{font-size: 15px;}
+    </style>
+  {% endblock custom_css %}
 {% block blog_home_block %}
-<div class="container">
-    <h1> Login </h1>
+<hr class="featurette-divider">
+<div class="bg-primary jumbotron-fluid">
+  <p class="display-4 text-center">LOG IN TO WEDEVELOPERS</p>
 </div>
+<hr class="featurette-divider">
+
+<div class="container">
+<form class="form-signin">
+  <div class="mb-4 mt-4 sign">
+  <img class="rounded-circle sign" src="{% static 'common/logo2.png' %}" alt="" width="100" height="100">
+</div>
+  <h1 class="h3 mb-3 text-center font-weight-normal">Please sign in</h1>
+  <label for="inputEmail" class="sr-only">Email address</label>
+  <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+</form>
+</div>
+
+<hr class="featurette-divider">
+<hr class="featurette-divider">
+
 {% endblock blog_home_block %}
 
   {% block js %}

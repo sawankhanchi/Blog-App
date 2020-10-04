@@ -2,13 +2,73 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block custom_css %}
+<style>
+.display-4{font-size: 30px;font-weight: bolder;color:white;}
+.lead{font-size: 15px;}
 
+</style>
 {% endblock custom_css %}
 
 {% block blog_home_block %}
-                            
-    <div class="container">
-        <h1> This is About Us Page </h1>
-        <img class='rounded-circle img-fluid' src="{%static 'common/logo.png'%}" alt='logo' >
+<hr class="featurette-divider">
+<div class="bg-primary jumbotron-fluid">
+  <p class="display-4 text-center">ABOUT US</p>
+</div>
+    
+
+    <hr class="featurette-divider">
+<div class="container my-2">
+<div class="row featurette ">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+        <p class="lead">Donec ullamcorper Lorem ipsum dolor sit Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempori amet consectetur adipisicing elit. Quis quasi voluptatem facilis nobis quam vitae distinctio. Quisquam eius voluptate laudantium? nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img class="featurette-image  img-fluid rounded-circle mr-0" data-src="holder.js/500x500/auto" alt="500x500" style="width:300px; height: 300px;" src="{% static 'common/logo2.png' %}" data-holder-rendered="true">
+      </div>
+</div>
+
+</div>
+<hr class="featurette-divider">
+
+<div class="bg-primary jumbotron-fluid">
+  <p class="display-4 text-center">OUR TEAM</p>
+</div>
+
+<hr class="featurette-divider">
+<div class="container">
+<div class="row marketing" style="margin-top:20px;">
+    <div class="col-md-4 col-lg-4 col-sm-4 text-center col-xs-12 " data-wow-delay="0.45ms">
+    <img src="{% static 'common/logo2.png' %}" style="width: 40%; height:auto; border-radius:100px;">
+    <h4 style="color:rgba(168,168,168);">Lorem</h4>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque rem mollitia nam cum iste aliquid illo aut corrupti, quod minima?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni distinctio in tenetur quae reiciendis minus suscipit voluptatem recusandae aspernatur nesciunt.</p>
+    <a href="#"><i class="fa fa-facebook fa-x" aria-hidden="true"></i></a> |
+    <a href="#"><i class="fa fa-twitter fa-x" aria-hidden="true"></i></a> |
+    
+    <a href="#"><i class="fa fa-linkedin fa-x" aria-hidden="true"></i></a>
     </div>
+    <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12 text-center" data-wow-delay="0.45ms">
+    <img src="{% static 'common/logo2.png' %}" style="width: 40%; height:auto; border-radius:100px;">
+    <h4 style="color: rgba(168,168,168);">Lorem</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque necessitatibus nisi repellat ad, nihil aliquam impedit cum! Porro, molestias? Nihil similique pariatur autem, beatae temporibus voluptatem accusantium adipisci illum optio dolore porro hic aliquid laudantium aspernatur expedita? Inventore, aspernatur nisi!</p>
+    <a href="#"><i class="fa fa-facebook fa-x" aria-hidden="true"></i></a> |
+    <a href="#"><i class="fa fa-twitter fa-x" aria-hidden="true"></i></a> |
+    
+    <a href="#"><i class="fa fa-linkedin fa-x" aria-hidden="true"></i></a>
+    </div>
+    <div class="col-md-4 col-lg-4 col-sm-4 text-center col-xs-12" data-wow-delay="0.45ms">
+    <img src="{% static 'common/logo2.png' %}" style="width: 40%; height:auto; border-radius:100px; ">
+    <h4 style="color: rgba(168,168,168);">Lorem </h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A suscipit facilis accusantium porro consectetur atque quas! Sunt, eos provident esse vel beatae soluta, enim autem modi possimus sapiente quia unde. Sed cum dolorum voluptatem pariatur exercitationem aspernatur sunt, laudantium saepe?</p>
+    <a href="#"><i class="fa fa-facebook fa-x" aria-hidden="true"></i></a> |
+    <a href="#"><i class="fa fa-twitter fa-x" aria-hidden="true"></i></a> |
+    
+    <a href="#"><i class="fa fa-linkedin fa-x" aria-hidden="true"></i></a>
+    </div>
+    <div class="clearfix"> </div>
+    
+    </div>
+    </div>
+</div>
+<hr class="featurette-divider">
 {% endblock blog_home_block %}
