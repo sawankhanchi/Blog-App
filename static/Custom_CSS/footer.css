@@ -77,3 +77,19 @@ box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 transition: all 250ms ease-in-out 0s;
 
 }
+
+footer .main-footer {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    background: #f8f9fa;
+}
+
+.typo-light h1, .typo-light h2, .typo-light h3, .typo-light h4, .typo-light h5, .typo-light h6, .typo-light p, .typo-light div, .typo-light span, .typo-light small {
+    color: #212529;
+}
+
+.widget li a {
+    color: #f8f9fa;
+}

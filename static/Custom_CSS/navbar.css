@@ -11,3 +11,20 @@ a.navbar-brand {
     line-height: inherit;
     white-space: nowrap;
 }
+
+.btn-warning {
+    border-color: #17a2b8;
+}
+
+.btn {
+    background-color: #17a2b8;
+    color: #f8f9fa;
+}
+
+.btn-danger {
+    border-color: #17a2b8;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #f8f9fab3;
+}
