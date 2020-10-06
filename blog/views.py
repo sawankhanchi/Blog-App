@@ -7,7 +7,7 @@ def home(request):
 def contact(request):
     return render(request, 'contact/contact.html', {})
 
-def blog(request):
+def bloglist(request):
     return render(request, 'blog/blog.html', {})
 
 def blogpost(request):

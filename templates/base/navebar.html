@@ -1,9 +1,9 @@
-{% url 'BlogHome' as home_url %}
-{% url 'Contact' as contact_url %}
-{% url 'login' as login_url %}
-{% url 'register' as register_url %}
-{% url 'about' as about_url %}
-{% url 'Blog' as blog_url %}
+{% url 'Blog:BlogHome' as home_url %}
+{% url 'Blog:Contact' as contact_url %}
+{% url 'Blog:login' as login_url %}
+{% url 'Blog:register' as register_url %}
+{% url 'Blog:about' as about_url %}
+{% url 'Blog:BlogList' as blog_url %}
 {% load static %}
 <nav class="navbar mb-1 navbar-expand-lg navbar-dark bg-primary">
 
@@ -35,11 +35,7 @@
       </li> -->
 
     </ul>
-    <form class="form-inline ml-auto ">
-      <input class="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search" style="border-radius:10%" >
-      <button class="btn btn-warning my-2 my-sm-0 " type="submit" style="border-radius:30%">Search</button>
-    </form>
-  
+  {% include 'search/snippets/searchform.html' %}
 
   <div class="form-inline">
     {% if user.is_authenticated %}
